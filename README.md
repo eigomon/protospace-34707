@@ -25,11 +25,21 @@ Things you may want to cover:
 
 ## usersテーブル
 
-| Column      | Type    | Options      |
-| ----------- | ------- | ------------ |
-| email       | string  | null: false  |
-| password    | string  | null: false  |
-| name        | string  | null: false  |
-| profile     | text    | null: false  |
-| occupation  | text    | null: false  |
-| position    | text    | null: false  |
+| Column      | Type       | Options      |
+| ----------- | ---------- | ------------ |
+| email       | string     | null: false  |
+| password    | string     | null: false  |
+| name        | string     | null: false  |
+| profile     | text       | null: false  |
+| occupation  | text       | null: false  |
+| position    | text       | null: false  |
+
+
+
+## commentsテーブル
+
+| Column      | Type        | Options                        |
+| ----------- | ----------- | ------------------------------ |
+| text        | text        | null: false  |
+| user        | references  | null: false, foreign_key: true |
+| prototype   | references  | null: false, foreign_key: true |
